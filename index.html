@@ -51,7 +51,7 @@
       <!-- Drawer -->
       <div
         id="drawer"
-        class="fixed top-0 left-0 w-1/2 max-w-sm h-full bg-white shadow-lg z-50 transform -translate-x-full transition-transform duration-300 ease-in-out"
+        class="fixed top-0 left-0 w-1/2 max-w-sm h-full bg-white shadow-lg z-50 transform -translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto"
       >
         <div class="flex justify-between items-center gap-4 px-4 py-4 border-b">
           <!-- Drawer Logo -->
@@ -77,6 +77,8 @@
         <!-- Drawer Navigation Links -->
         <nav class="flex flex-col gap-4 px-6 py-6 text-black">
           <a href="#" onclick="navigateToScheme()">Scheme</a>
+          <a href="#" onclick="navigateToCatalogues()">Catalogues</a>
+          <a href="#" onclick="navigateToQuickPurchase()">Quick Purchase</a>
           <a href="#" onclick="navigateToBankDetails()">Bank</a>
           <a href="#" onclick="navigateToKyc()">KYC</a>
           <a href="#" onclick="navigateToRate()">Rate</a>
@@ -208,12 +210,12 @@
       <!-- Grid Container -->
       <div
         id="boxContainer"
-        class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 gap-3 md:gap-3 lg:gap-6 overflow-hidden transition-all duration-500 max-h-[13.5rem] sm:max-h-none"
+        class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 lg:grid-cols-7 gap-3 md:gap-3 lg:gap-6 overflow-hidden transition-all duration-500 max-h-[15.5rem] sm:max-h-none"
       >
         <!-- Box 1 -->
         <div
           onclick="navigateToScheme()"
-          class="w-24 h-24 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
+          class="h-28 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
           data-aos="zoom-in"
           data-aos-delay="100"
           style="
@@ -233,10 +235,54 @@
           <span class="text-sm text-white font-semibold mt-2">Scheme</span>
         </div>
 
+         <div
+          onclick="navigateToCatalogues()"
+          class="h-28 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
+          data-aos="zoom-in"
+          data-aos-delay="100"
+          style="
+            background: linear-gradient(
+              135deg,
+              #0d121d 0%,
+              #141e30 30%,
+              #243b55 70%,
+              #0f172a 100%
+            );
+          "
+        >
+          <img
+            class="w-10 h-10 invert"
+            src="https://cdn-icons-png.flaticon.com/128/29/29341.png"
+          />
+          <span class="text-sm text-white font-semibold mt-2">Catalogues</span>
+        </div>
+
+         <div
+          onclick="navigateToQuickPurchase()"
+          class="h-28 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
+          data-aos="zoom-in"
+          data-aos-delay="100"
+          style="
+            background: linear-gradient(
+              135deg,
+              #0d121d 0%,
+              #141e30 30%,
+              #243b55 70%,
+              #0f172a 100%
+            );
+          "
+        >
+          <img
+            class="w-10 h-10 invert"
+            src="https://cdn-icons-png.flaticon.com/128/1019/1019709.png"
+          />
+          <span class="text-sm text-white font-semibold mt-2">Quick Purchase</span>
+        </div>
+
         <!-- Box 2 -->
         <div
           onclick="navigateToBankDetails()"
-          class="w-24 h-24 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
+          class="h-28 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
           data-aos="zoom-in"
           data-aos-delay="100"
           style="
@@ -259,7 +305,7 @@
         <!-- Box 3 -->
         <div
           onclick="navigateToKyc()"
-          class="w-24 h-24 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
+          class="h-28 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
           data-aos="zoom-in"
           data-aos-delay="100"
           style="
@@ -282,7 +328,7 @@
         <!-- Box 4 -->
         <div
           onclick="navigateToRate()"
-          class="w-24 h-24 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
+          class="h-28 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
           data-aos="zoom-in"
           data-aos-delay="100"
           style="
@@ -305,7 +351,7 @@
         <!-- Box 5 -->
         <div
           onclick="navigateSchemeRecords()"
-          class="w-24 h-24 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
+          class="h-28 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
           data-aos="zoom-in"
           data-aos-delay="100"
           style="
@@ -328,7 +374,7 @@
         <!-- Box 6 -->
         <div
           onclick="navigateToCustomerCard()"
-          class="w-24 h-24 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
+          class="h-28 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
           data-aos="zoom-in"
           data-aos-delay="100"
           style="
@@ -351,7 +397,7 @@
         <!-- Box 7 -->
         <div
           onclick="navigateTransactionHistory()"
-          class="w-24 h-24 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
+          class="h-28 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
           data-aos="zoom-in"
           data-aos-delay="100"
           style="
@@ -374,7 +420,7 @@
         <!-- Box 8 -->
         <div
           onclick="navigateToMyOrder()"
-          class="w-24 h-24 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
+          class="h-28 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
           data-aos="zoom-in"
           data-aos-delay="100"
           style="
@@ -397,7 +443,7 @@
         <!-- Box 9 -->
         <div
           onclick="navigateToUserProfile()"
-          class="w-24 h-24 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
+          class="h-28 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
           data-aos="zoom-in"
           data-aos-delay="100"
           style="
@@ -420,7 +466,7 @@
         <!-- Box 10 -->
         <div
           onclick="navigateToDigitalGold()"
-          class="w-24 h-24 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
+          class="h-28 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
           data-aos="zoom-in"
           data-aos-delay="100"
           style="
@@ -444,7 +490,7 @@
 
         <div
           onclick="navigateToPanchang()"
-          class="w-24 h-24 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
+          class="h-28 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
           data-aos="zoom-in"
           data-aos-delay="100"
           style="
@@ -467,7 +513,7 @@
         <!-- Box 12 -->
         <div
           onclick="navigateToSetting()"
-          class="w-24 h-24 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
+          class="h-28 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
           data-aos="zoom-in"
           data-aos-delay="100"
           style="
