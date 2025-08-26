@@ -1,224 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Verma Jwls</title>
-    <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Swiper CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,400;1,600&family=Josefin+Sans:ital,wght@0,400;1,400&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verma Jwls</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- AOS CSS -->
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,400;1,600&family=Josefin+Sans:ital,wght@0,400;1,400&display=swap"
+    rel="stylesheet" />
 
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- Header -->
-    <div>
-      <header
-        class="bg-white text-gray-900 relative flex items-center justify-center px-4 md:px-10 py-3"
-        data-aos="fade-down"
-      >
-        <!-- Hamburger Icon using Image -->
-        <button
-          id="menu-toggle"
-          class="absolute left-4 top-1/2 -translate-y-1/2 focus:outline-none"
-          aria-label="Open Menu"
-        >
-          <img
-            src="https://cdn-icons-png.flaticon.com/128/6995/6995971.png"
-            alt="menu"
-            class="w-10 h-10"
-            loading="lazy"
-          />
-        </button>
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
-        <!-- Centered Logo -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <div>
+    <header class="bg-white text-gray-900 relative flex items-center justify-center px-4 md:px-10 py-3"
+      data-aos="fade-down">
+      <!-- Hamburger Icon using Image -->
+      <button id="menu-toggle" class="absolute left-4 top-1/2 -translate-y-1/2 focus:outline-none"
+        aria-label="Open Menu">
+        <img src="https://cdn-icons-png.flaticon.com/128/6995/6995971.png" alt="menu" class="w-10 h-10"
+          loading="lazy" />
+      </button>
+
+      <!-- Centered Logo -->
+      <div class="text-2xl font-bold text-[#133235] flex items-center gap-2">
+        <img src="assets/verma-jewellers-logo.png" alt="Logo" class="h-28" />
+      </div>
+    </header>
+
+    <!-- Drawer -->
+    <div id="drawer"
+      class="fixed top-0 left-0 w-1/2 max-w-sm h-full bg-white shadow-lg z-50 transform -translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto">
+      <div class="flex justify-between items-center gap-4 px-4 py-4 border-b">
+        <!-- Drawer Logo -->
         <div class="text-2xl font-bold text-[#133235] flex items-center gap-2">
-          <img src="assets/verma-jewellers-logo.png" alt="Logo" class="h-28" />
+          <img src="assets/verma-jewellers-logo.png" alt="Logo" class="h-16" />
         </div>
-      </header>
-
-      <!-- Drawer -->
-      <div
-        id="drawer"
-        class="fixed top-0 left-0 w-1/2 max-w-sm h-full bg-white shadow-lg z-50 transform -translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto"
-      >
-        <div class="flex justify-between items-center gap-4 px-4 py-4 border-b">
-          <!-- Drawer Logo -->
-          <div
-            class="text-2xl font-bold text-[#133235] flex items-center gap-2"
-          >
-            <img
-              src="assets/verma-jewellers-logo.png"
-              alt="Logo"
-              class="h-16"
-            />
-          </div>
-          <!-- Close Drawer Button -->
-          <button
-            id="close-drawer"
-            class="text-black rounded text-2xl font-bold"
-            aria-label="Close Menu"
-          >
-            ✕
-          </button>
-        </div>
-
-        <!-- Drawer Navigation Links -->
-        <nav class="flex flex-col gap-4 px-6 py-6 text-black">
-          <a href="#" onclick="navigateToScheme()">Scheme</a>
-          <a href="#" onclick="navigateToCatalogues()">Catalogues</a>
-          <a href="#" onclick="navigateToQuickPurchase()">Quick Purchase</a>
-          <a href="#" onclick="navigateToBankDetails()">Bank</a>
-          <a href="#" onclick="navigateToKyc()">KYC</a>
-          <a href="#" onclick="navigateToRate()">Rate</a>
-          <a href="#" onclick="navigateSchemeRecords()">Records</a>
-          <a href="#" onclick="navigateToCustomerCard()">Card</a>
-          <a href="#" onclick="navigateTransactionHistory()">History</a>
-          <a href="#" onclick="navigateToMyOrder()">Order</a>
-          <a href="#" onclick="navigateToUserProfile()">Profile</a>
-          <a href="#" onclick="navigateToDigitalGold()">Gold</a>
-          <a href="#" onclick="navigateToPanchang()">Panchang</a>
-          <a href="#" onclick="navigateToSetting()">Settings</a>
-        </nav>
+        <!-- Close Drawer Button -->
+        <button id="close-drawer" class="text-black rounded text-2xl font-bold" aria-label="Close Menu">
+          ✕
+        </button>
       </div>
 
-      <!-- Overlay -->
-      <div
-        id="overlay"
-        class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden"
-      ></div>
+      <!-- Drawer Navigation Links -->
+      <nav class="flex flex-col gap-4 px-6 py-6 text-black">
+        <a href="#" onclick="navigateToScheme()">Scheme</a>
+        <!-- <a href="#" onclick="navigateToCatalogues()">Catalogues</a> -->
+        <!-- <a href="#" onclick="navigateToQuickPurchase()">Quick Purchase</a> -->
+        <a href="#" onclick="navigateToBankDetails()">Bank</a>
+        <a href="#" onclick="navigateToKyc()">KYC</a>
+        <a href="#" onclick="navigateToRate()">Rate</a>
+        <a href="#" onclick="navigateSchemeRecords()">Records</a>
+        <a href="#" onclick="navigateToCustomerCard()">Card</a>
+        <a href="#" onclick="navigateTransactionHistory()">History</a>
+        <a href="#" onclick="navigateToMyOrder()">Order</a>
+        <a href="#" onclick="navigateToUserProfile()">Profile</a>
+        <a href="#" onclick="navigateToDigitalGold()">Gold</a>
+        <a href="#" onclick="navigateToPanchang()">Panchang</a>
+        <a href="#" onclick="navigateToSetting()">Settings</a>
+      </nav>
     </div>
 
-    <!-- Swiper -->
-    <div class="swiper brandingSwiper w-full h-auto">
-      <div class="swiper-wrapper">
-        <!-- Slide 1 -->
-        <div class="swiper-slide flex flex-col items-center justify-start">
-          <div class="w-full">
-            <!-- Mobile Image -->
-            <img
-              src="assets/banner1_mobile.jpg"
-              alt="Mobile Image 1"
-              class="w-full object-fill block md:hidden px-4"
-            />
-            <!-- Desktop Image -->
-            <img
-              src="assets/banner1.jpg"
-              alt="Desktop Image 1"
-              class="w-full h-[300px] lg:h-[500px] object-fill hidden md:block"
-            />
-          </div>
-        </div>
+    <!-- Overlay -->
+    <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden"></div>
+  </div>
 
-        <!-- Slide 2 -->
-        <div class="swiper-slide flex flex-col items-center justify-start">
-          <div class="w-full">
-            <!-- Mobile Image -->
-            <img
-              src="assets/banner2_mobile.jpg"
-              alt="Mobile Image 2"
-              class="w-full object-fill block md:hidden px-4"
-            />
-            <!-- Desktop Image -->
-            <img
-              src="assets/banner2.jpg"
-              alt="Desktop Image 2"
-              class="w-full h-[300px] lg:h-[500px] object-fill hidden md:block"
-            />
-          </div>
-        </div>
-
-        <!-- Slide 3 -->
-        <div class="swiper-slide flex flex-col items-center justify-start">
-          <div class="w-full">
-            <!-- Mobile Image -->
-            <img
-              src="assets/banner3_mobile.jpg"
-              alt="Mobile Image 2"
-              class="w-full object-fill block md:hidden px-4"
-            />
-            <!-- Desktop Image -->
-            <img
-              src="assets/banner3.jpg"
-              alt="Desktop Image 2"
-              class="w-full h-[300px] lg:h-[500px] object-fill hidden md:block"
-            />
-          </div>
-        </div>
-
-        <!-- Slide 4 -->
-        <div class="swiper-slide flex flex-col items-center justify-start">
-          <div class="w-full">
-            <!-- Mobile Image -->
-            <img
-              src="assets/banner4_mobile.jpg"
-              alt="Mobile Image 2"
-              class="w-full object-fill block md:hidden px-4"
-            />
-            <!-- Desktop Image -->
-            <img
-              src="assets/banner4.jpg"
-              alt="Desktop Image 2"
-              class="w-full h-[300px] lg:h-[500px] object-fill hidden md:block"
-            />
-          </div>
+  <!-- Swiper -->
+  <div class="swiper brandingSwiper w-full h-auto">
+    <div class="swiper-wrapper">
+      <!-- Slide 1 -->
+      <div class="swiper-slide flex flex-col items-center justify-start">
+        <div class="w-full">
+          <!-- Mobile Image -->
+          <img src="assets/banner1_mobile.jpg" alt="Mobile Image 1" class="w-full object-fill block md:hidden px-4" />
+          <!-- Desktop Image -->
+          <img src="assets/banner1.jpg" alt="Desktop Image 1"
+            class="w-full h-[300px] lg:h-[500px] object-fill hidden md:block" />
         </div>
       </div>
 
-      <!-- Pagination -->
-      <div
-        class="swiper-pagination absolute bottom-4 left-0 right-0 mx-auto text-center z-10"
-      ></div>
+      <!-- Slide 2 -->
+      <div class="swiper-slide flex flex-col items-center justify-start">
+        <div class="w-full">
+          <!-- Mobile Image -->
+          <img src="assets/banner2_mobile.jpg" alt="Mobile Image 2" class="w-full object-fill block md:hidden px-4" />
+          <!-- Desktop Image -->
+          <img src="assets/banner2.jpg" alt="Desktop Image 2"
+            class="w-full h-[300px] lg:h-[500px] object-fill hidden md:block" />
+        </div>
+      </div>
 
-      <!-- Navigation Buttons -->
-      <div
-        class="swiper-button-next hidden md:flex !w-10 !h-10 bg-white/20 text-white rounded-full backdrop-blur flex items-center justify-center hover:bg-black/30"
-      ></div>
-      <div
-        class="swiper-button-prev hidden md:flex !w-10 !h-10 bg-white/20 text-white rounded-full backdrop-blur flex items-center justify-center hover:bg-black/30"
-      ></div>
+      <!-- Slide 3 -->
+      <div class="swiper-slide flex flex-col items-center justify-start">
+        <div class="w-full">
+          <!-- Mobile Image -->
+          <img src="assets/banner3_mobile.jpg" alt="Mobile Image 2" class="w-full object-fill block md:hidden px-4" />
+          <!-- Desktop Image -->
+          <img src="assets/banner3.jpg" alt="Desktop Image 2"
+            class="w-full h-[300px] lg:h-[500px] object-fill hidden md:block" />
+        </div>
+      </div>
 
-      <!-- Autoplay Progress -->
-      <div
-        class="autoplay-progress absolute right-4 bottom-4 w-8 h-8 md:w-12 md:h-12 flex items-center justify-center font-bold text-[#1A3E63] z-10"
-      >
-        <svg
-          viewBox="0 0 48 48"
-          class="absolute left-0 top-0 w-full h-full stroke-[#1A3E63] stroke-[4] fill-none z-[-1]"
-        >
-          <circle cx="24" cy="24" r="20"></circle>
-        </svg>
-        <span class="text-sm md:text-lg"></span>
+      <!-- Slide 4 -->
+      <div class="swiper-slide flex flex-col items-center justify-start">
+        <div class="w-full">
+          <!-- Mobile Image -->
+          <img src="assets/banner4_mobile.jpg" alt="Mobile Image 2" class="w-full object-fill block md:hidden px-4" />
+          <!-- Desktop Image -->
+          <img src="assets/banner4.jpg" alt="Desktop Image 2"
+            class="w-full h-[300px] lg:h-[500px] object-fill hidden md:block" />
+        </div>
       </div>
     </div>
 
-    <!-- services  -->
+    <!-- Pagination -->
+    <div class="swiper-pagination absolute bottom-4 left-0 right-0 mx-auto text-center z-10"></div>
+
+    <!-- Navigation Buttons -->
     <div
-      class="flex flex-col items-center justify-center pt-6 px-6 md:py-10 font-['Roboto']"
-    >
-      <!-- Grid Container -->
-      <div
-        id="boxContainer"
-        class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 lg:grid-cols-7 gap-3 md:gap-3 lg:gap-6 overflow-hidden transition-all duration-500 max-h-[15.5rem] sm:max-h-none"
-      >
-        <!-- Box 1 -->
-        <div
-          onclick="navigateToScheme()"
-          class="h-28 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
-          data-aos="zoom-in"
-          data-aos-delay="100"
-          style="
+      class="swiper-button-next hidden md:flex !w-10 !h-10 bg-white/20 text-white rounded-full backdrop-blur flex items-center justify-center hover:bg-black/30">
+    </div>
+    <div
+      class="swiper-button-prev hidden md:flex !w-10 !h-10 bg-white/20 text-white rounded-full backdrop-blur flex items-center justify-center hover:bg-black/30">
+    </div>
+
+    <!-- Autoplay Progress -->
+    <div
+      class="autoplay-progress absolute right-4 bottom-4 w-8 h-8 md:w-12 md:h-12 flex items-center justify-center font-bold text-[#1A3E63] z-10">
+      <svg viewBox="0 0 48 48" class="absolute left-0 top-0 w-full h-full stroke-[#1A3E63] stroke-[4] fill-none z-[-1]">
+        <circle cx="24" cy="24" r="20"></circle>
+      </svg>
+      <span class="text-sm md:text-lg"></span>
+    </div>
+  </div>
+
+  <!-- services  -->
+  <div class="flex flex-col items-center justify-center pt-6 px-6 md:py-10 font-['Roboto']">
+    <!-- Grid Container -->
+    <div id="boxContainer"
+      class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 lg:grid-cols-6 gap-3 md:gap-3 lg:gap-6 overflow-hidden transition-all duration-500 max-h-[15.5rem] sm:max-h-none">
+      <!-- Box 1 -->
+      <div onclick="navigateToScheme()"
+        class="h-28 w-24 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
+        data-aos="zoom-in" data-aos-delay="100" style="
             background: linear-gradient(
               135deg,
               #0d121d 0%,
@@ -226,18 +159,159 @@
               #243b55 70%,
               #0f172a 100%
             );
-          "
-        >
-          <img
-            class="w-10 h-10 invert"
-            src="https://cdn-icons-png.flaticon.com/128/10150/10150740.png"
-          />
-          <span class="text-sm text-white font-semibold mt-2">Scheme</span>
-        </div>
+          ">
+        <img class="w-10 h-10 invert" src="https://cdn-icons-png.flaticon.com/128/10150/10150740.png" />
+        <span class="text-sm text-white font-semibold mt-2">Scheme</span>
+      </div>
 
-         <div
+     
+      <!-- Box 2 -->
+      <div onclick="navigateToBankDetails()"
+        class="h-28 w-24 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
+        data-aos="zoom-in" data-aos-delay="100" style="
+            background: linear-gradient(
+              135deg,
+              #0d121d 0%,
+              #141e30 30%,
+              #243b55 70%,
+              #0f172a 100%
+            );
+          ">
+        <img class="w-10 h-10 invert" src="https://cdn-icons-png.flaticon.com/128/522/522554.png" />
+        <span class="text-sm text-white font-semibold mt-2">Bank</span>
+      </div>
+
+      <!-- Box 3 -->
+      <div onclick="navigateToKyc()"
+        class="h-28 w-24 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
+        data-aos="zoom-in" data-aos-delay="100" style="
+            background: linear-gradient(
+              135deg,
+              #0d121d 0%,
+              #141e30 30%,
+              #243b55 70%,
+              #0f172a 100%
+            );
+          ">
+        <img class="w-10 h-10 invert" src="https://cdn-icons-png.flaticon.com/128/18282/18282110.png" />
+        <span class="text-sm text-white font-semibold mt-2">KYC</span>
+      </div>
+
+      <!-- Box 4 -->
+      <div onclick="navigateToRate()"
+        class="h-28 w-24 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
+        data-aos="zoom-in" data-aos-delay="100" style="
+            background: linear-gradient(
+              135deg,
+              #0d121d 0%,
+              #141e30 30%,
+              #243b55 70%,
+              #0f172a 100%
+            );
+          ">
+        <img class="w-10 h-10 invert" src="https://cdn-icons-png.flaticon.com/128/592/592015.png" />
+        <span class="text-sm text-white font-semibold mt-2">Rate</span>
+      </div>
+
+      <!-- Box 5 -->
+      <div onclick="navigateSchemeRecords()"
+        class="h-28 w-24 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
+        data-aos="zoom-in" data-aos-delay="100" style="
+            background: linear-gradient(
+              135deg,
+              #0d121d 0%,
+              #141e30 30%,
+              #243b55 70%,
+              #0f172a 100%
+            );
+          ">
+        <img class="w-10 h-10 invert" src="https://cdn-icons-png.flaticon.com/128/2910/2910768.png" />
+        <span class="text-sm text-white font-semibold mt-2">Records</span>
+      </div>
+
+      <!-- Box 6 -->
+      <div onclick="navigateToCustomerCard()"
+        class="h-28 w-24 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
+        data-aos="zoom-in" data-aos-delay="100" style="
+            background: linear-gradient(
+              135deg,
+              #0d121d 0%,
+              #141e30 30%,
+              #243b55 70%,
+              #0f172a 100%
+            );
+          ">
+        <img class="w-10 h-10 invert" src="https://cdn-icons-png.flaticon.com/128/3037/3037255.png" />
+        <span class="text-sm text-white font-semibold mt-2">Card</span>
+      </div>
+
+      <!-- Box 7 -->
+      <div onclick="navigateTransactionHistory()"
+        class="h-28 w-24 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
+        data-aos="zoom-in" data-aos-delay="100" style="
+            background: linear-gradient(
+              135deg,
+              #0d121d 0%,
+              #141e30 30%,
+              #243b55 70%,
+              #0f172a 100%
+            );
+          ">
+        <img class="w-10 h-10 invert" src="https://cdn-icons-png.flaticon.com/128/3503/3503786.png" />
+        <span class="text-sm text-white font-semibold mt-2">History</span>
+      </div>
+
+      <!-- Box 8 -->
+      <div onclick="navigateToMyOrder()"
+        class="h-28 w-24 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
+        data-aos="zoom-in" data-aos-delay="100" style="
+            background: linear-gradient(
+              135deg,
+              #0d121d 0%,
+              #141e30 30%,
+              #243b55 70%,
+              #0f172a 100%
+            );
+          ">
+        <img class="w-10 h-10 invert" src="https://cdn-icons-png.flaticon.com/128/10597/10597732.png" />
+        <span class="text-sm text-white font-semibold mt-2">Order</span>
+      </div>
+
+      <!-- Box 9 -->
+      <div onclick="navigateToUserProfile()"
+        class="h-28 w-24 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
+        data-aos="zoom-in" data-aos-delay="100" style="
+            background: linear-gradient(
+              135deg,
+              #0d121d 0%,
+              #141e30 30%,
+              #243b55 70%,
+              #0f172a 100%
+            );
+          ">
+        <img class="w-10 h-10 invert" src="https://cdn-icons-png.flaticon.com/128/1946/1946429.png" />
+        <span class="text-sm text-white font-semibold mt-2">Profile</span>
+      </div>
+
+      <!-- Box 10 -->
+      <div onclick="navigateToDigitalGold()"
+        class="h-28 w-24 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
+        data-aos="zoom-in" data-aos-delay="100" style="
+            background: linear-gradient(
+              135deg,
+              #0d121d 0%,
+              #141e30 30%,
+              #243b55 70%,
+              #0f172a 100%
+            );
+          ">
+        <img class="w-10 h-10 invert" src="https://cdn-icons-png.flaticon.com/128/1473/1473430.png" />
+        <span class="text-sm text-white font-semibold mt-2">Gold</span>
+      </div>
+
+       <!-- <div
           onclick="navigateToCatalogues()"
-          class="h-28 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
+          class="h-28 w-24 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
           data-aos="zoom-in"
           data-aos-delay="100"
           style="
@@ -255,11 +329,11 @@
             src="https://cdn-icons-png.flaticon.com/128/29/29341.png"
           />
           <span class="text-sm text-white font-semibold mt-2">Catalogues</span>
-        </div>
-
+        </div> -->
+      <!-- 
          <div
           onclick="navigateToQuickPurchase()"
-          class="h-28 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
+          class="h-28 w-24 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
           data-aos="zoom-in"
           data-aos-delay="100"
           style="
@@ -277,15 +351,14 @@
             src="https://cdn-icons-png.flaticon.com/128/1019/1019709.png"
           />
           <span class="text-sm text-white font-semibold mt-2">Quick Purchase</span>
-        </div>
+        </div> -->
 
-        <!-- Box 2 -->
-        <div
-          onclick="navigateToBankDetails()"
-          class="h-28 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
-          data-aos="zoom-in"
-          data-aos-delay="100"
-          style="
+
+      <!-- Box 11 -->
+
+      <div onclick="navigateToPanchang()"
+        class="h-28 w-24 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
+        data-aos="zoom-in" data-aos-delay="100" style="
             background: linear-gradient(
               135deg,
               #0d121d 0%,
@@ -293,430 +366,166 @@
               #243b55 70%,
               #0f172a 100%
             );
-          "
-        >
-          <img
-            class="w-10 h-10 invert"
-            src="https://cdn-icons-png.flaticon.com/128/522/522554.png"
-          />
-          <span class="text-sm text-white font-semibold mt-2">Bank</span>
-        </div>
-
-        <!-- Box 3 -->
-        <div
-          onclick="navigateToKyc()"
-          class="h-28 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
-          data-aos="zoom-in"
-          data-aos-delay="100"
-          style="
-            background: linear-gradient(
-              135deg,
-              #0d121d 0%,
-              #141e30 30%,
-              #243b55 70%,
-              #0f172a 100%
-            );
-          "
-        >
-          <img
-            class="w-10 h-10 invert"
-            src="https://cdn-icons-png.flaticon.com/128/18282/18282110.png"
-          />
-          <span class="text-sm text-white font-semibold mt-2">KYC</span>
-        </div>
-
-        <!-- Box 4 -->
-        <div
-          onclick="navigateToRate()"
-          class="h-28 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
-          data-aos="zoom-in"
-          data-aos-delay="100"
-          style="
-            background: linear-gradient(
-              135deg,
-              #0d121d 0%,
-              #141e30 30%,
-              #243b55 70%,
-              #0f172a 100%
-            );
-          "
-        >
-          <img
-            class="w-10 h-10 invert"
-            src="https://cdn-icons-png.flaticon.com/128/592/592015.png"
-          />
-          <span class="text-sm text-white font-semibold mt-2">Rate</span>
-        </div>
-
-        <!-- Box 5 -->
-        <div
-          onclick="navigateSchemeRecords()"
-          class="h-28 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
-          data-aos="zoom-in"
-          data-aos-delay="100"
-          style="
-            background: linear-gradient(
-              135deg,
-              #0d121d 0%,
-              #141e30 30%,
-              #243b55 70%,
-              #0f172a 100%
-            );
-          "
-        >
-          <img
-            class="w-10 h-10 invert"
-            src="https://cdn-icons-png.flaticon.com/128/2910/2910768.png"
-          />
-          <span class="text-sm text-white font-semibold mt-2">Records</span>
-        </div>
-
-        <!-- Box 6 -->
-        <div
-          onclick="navigateToCustomerCard()"
-          class="h-28 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
-          data-aos="zoom-in"
-          data-aos-delay="100"
-          style="
-            background: linear-gradient(
-              135deg,
-              #0d121d 0%,
-              #141e30 30%,
-              #243b55 70%,
-              #0f172a 100%
-            );
-          "
-        >
-          <img
-            class="w-10 h-10 invert"
-            src="https://cdn-icons-png.flaticon.com/128/3037/3037255.png"
-          />
-          <span class="text-sm text-white font-semibold mt-2">Card</span>
-        </div>
-
-        <!-- Box 7 -->
-        <div
-          onclick="navigateTransactionHistory()"
-          class="h-28 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
-          data-aos="zoom-in"
-          data-aos-delay="100"
-          style="
-            background: linear-gradient(
-              135deg,
-              #0d121d 0%,
-              #141e30 30%,
-              #243b55 70%,
-              #0f172a 100%
-            );
-          "
-        >
-          <img
-            class="w-10 h-10 invert"
-            src="https://cdn-icons-png.flaticon.com/128/3503/3503786.png"
-          />
-          <span class="text-sm text-white font-semibold mt-2">History</span>
-        </div>
-
-        <!-- Box 8 -->
-        <div
-          onclick="navigateToMyOrder()"
-          class="h-28 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
-          data-aos="zoom-in"
-          data-aos-delay="100"
-          style="
-            background: linear-gradient(
-              135deg,
-              #0d121d 0%,
-              #141e30 30%,
-              #243b55 70%,
-              #0f172a 100%
-            );
-          "
-        >
-          <img
-            class="w-10 h-10 invert"
-            src="https://cdn-icons-png.flaticon.com/128/10597/10597732.png"
-          />
-          <span class="text-sm text-white font-semibold mt-2">Order</span>
-        </div>
-
-        <!-- Box 9 -->
-        <div
-          onclick="navigateToUserProfile()"
-          class="h-28 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
-          data-aos="zoom-in"
-          data-aos-delay="100"
-          style="
-            background: linear-gradient(
-              135deg,
-              #0d121d 0%,
-              #141e30 30%,
-              #243b55 70%,
-              #0f172a 100%
-            );
-          "
-        >
-          <img
-            class="w-10 h-10 invert"
-            src="https://cdn-icons-png.flaticon.com/128/1946/1946429.png"
-          />
-          <span class="text-sm text-white font-semibold mt-2">Profile</span>
-        </div>
-
-        <!-- Box 10 -->
-        <div
-          onclick="navigateToDigitalGold()"
-          class="h-28 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
-          data-aos="zoom-in"
-          data-aos-delay="100"
-          style="
-            background: linear-gradient(
-              135deg,
-              #0d121d 0%,
-              #141e30 30%,
-              #243b55 70%,
-              #0f172a 100%
-            );
-          "
-        >
-          <img
-            class="w-10 h-10 invert"
-            src="https://cdn-icons-png.flaticon.com/128/1473/1473430.png"
-          />
-          <span class="text-sm text-white font-semibold mt-2">Gold</span>
-        </div>
-
-        <!-- Box 11 -->
-
-        <div
-          onclick="navigateToPanchang()"
-          class="h-28 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
-          data-aos="zoom-in"
-          data-aos-delay="100"
-          style="
-            background: linear-gradient(
-              135deg,
-              #0d121d 0%,
-              #141e30 30%,
-              #243b55 70%,
-              #0f172a 100%
-            );
-          "
-        >
-          <img
-            class="w-10 h-10 invert"
-            src="https://cdn-icons-png.flaticon.com/128/3013/3013143.png"
-          />
-          <span class="text-sm text-white font-semibold mt-2">Panchang</span>
-        </div>
-
-        <!-- Box 12 -->
-        <div
-          onclick="navigateToSetting()"
-          class="h-28 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
-          data-aos="zoom-in"
-          data-aos-delay="100"
-          style="
-            background: linear-gradient(
-              135deg,
-              #0d121d 0%,
-              #141e30 30%,
-              #243b55 70%,
-              #0f172a 100%
-            );
-          "
-        >
-          <img
-            class="w-10 h-10 invert"
-            src="https://cdn-icons-png.flaticon.com/128/2099/2099058.png"
-          />
-          <span class="text-sm text-white font-semibold mt-2">Settings</span>
-        </div>
+          ">
+        <img class="w-10 h-10 invert" src="https://cdn-icons-png.flaticon.com/128/3013/3013143.png" />
+        <span class="text-sm text-white font-semibold mt-2">Panchang</span>
       </div>
 
-      <!-- Toggle Button for Mobile -->
-      <div class="sm:hidden mt-4">
-        <button onclick="toggleBoxes()" class="animate-bounce text-gray-600">
-          <svg
-            id="arrowIcon"
-            class="w-8 h-8 mx-auto transition-transform duration-300"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M19 9l-7 7-7-7"
-            />
-          </svg>
-        </button>
+      <!-- Box 12 -->
+      <div onclick="navigateToSetting()"
+        class="h-28 w-24 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
+        data-aos="zoom-in" data-aos-delay="100" style="
+            background: linear-gradient(
+              135deg,
+              #0d121d 0%,
+              #141e30 30%,
+              #243b55 70%,
+              #0f172a 100%
+            );
+          ">
+        <img class="w-10 h-10 invert" src="https://cdn-icons-png.flaticon.com/128/2099/2099058.png" />
+        <span class="text-sm text-white font-semibold mt-2">Settings</span>
       </div>
     </div>
 
-    <!-- about  -->
+    <!-- Toggle Button for Mobile -->
+    <div class="sm:hidden mt-4">
+      <button onclick="toggleBoxes()" class="animate-bounce text-gray-600">
+        <svg id="arrowIcon" class="w-8 h-8 mx-auto transition-transform duration-300" fill="none" stroke="currentColor"
+          stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+    </div>
+  </div>
 
-    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
-      <!-- Iconic Section -->
-      <div class="flex flex-col items-center text-center" data-aos="fade-down">
-        <img
-          src="assets/iconic-jeweller-icon.png"
-          alt="Iconic Jeweller"
-          class="w-auto h-auto mb-4"
-        />
-        <p class="max-w-4xl text-2xl font-[didot]">
-          FOR ITS BEST QUALITY, SPLENDID DESIGNS &amp; FINEST CRAFTSMANSHIP,
-          VERMA JEWELLERS SOLAN WAS ADJUDGED AS ONE OF THE 100 ICONIC JEWELLERS
-          OF INDIA, BY ART OF JEWELLERY MAGAZINE, INDIA
-        </p>
-      </div>
+  <!-- about  -->
 
-      <!-- History Text Block -->
-      <div
-        class="text-center text-2xl max-w-5xl mx-auto font-[didot] italic"
-        data-aos="fade-up"
-      >
-        We always stand by the quality of designs and craftsmanship of our
-        jewellery. We ensure each and every jewel showcased in our store has
-        resulted after a careful selection process adhering to the quality
-        standards maintained by Verma Jewellers' ethos of giving nothing but the
-        best. At Verma Jewellers, our products come with a satisfaction
-        guarantee. We promise our customers to feel free and comfortable with
-        their choice and offer 100% return guarantee.
-      </div>
-
-      <!-- Founder Image -->
-      <div class="flex justify-center" data-aos="zoom-in-up">
-        <img
-          src="assets/founder.jpg"
-          alt="Founder"
-          class="w-auto h-72"
-        />
-      </div>
-
-      <!-- History Text Block 1 -->
-      <div
-        class="text-justify text-sm md:text-lg leading-relaxed max-w-5xl mx-auto space-y-4 font-normal"
-        data-aos="zoom-in-down"
-      >
-        <p>
-          The foundation of “VERMA JEWELLERS, SOLAN” was laid by the late Shri
-          Jawala Prasad Verma in 1967. He was joined by his eldest son Shri
-          Naresh Chand Verma and the father-son team set their foot to work hard
-          and establish Verma Jewellers in the heart of Solan town. During the
-          next twenty-five years, both of them, with a positive attitude, took
-          certain concrete steps to expand. They included the adjacent area into
-          a larger shop, the present shop in 1995.
-        </p>
-        <p>
-          Mr. Naresh Chand Verma was joined by his young and dynamic son Akshay
-          Verma in 2002 after completing his studies in Gemology, Diamond
-          Grading, and Jewellery Manufacturing from the Indian Diamond
-          Institute, Surat.
-        </p>
-      </div>
-
-      <!-- History Text Block 2 -->
-      <div
-        class="text-justify text-sm md:text-lg leading-relaxed max-w-5xl mx-auto font-normal"
-        data-aos="fade-up"
-      >
-        The first big step of Akshay Verma was to get Hallmarked Certification
-        from the Bureau of Indian Standards for 100% Hallmarked Jewellery. They
-        have the honour to be the first jewellery store certified by BIS in
-        Himachal Pradesh in September 2002. Leveraging his strengths in business
-        development, product development, human resources, and administration,
-        Akshay Verma has been the catalyst of growth for the brand.
-      </div>
-
-      <!-- History Text Block 3 -->
-      <div
-        class="text-justify text-sm md:text-lg leading-relaxed max-w-5xl mx-auto space-y-4 font-normal"
-        data-aos="fade-up"
-      >
-        <p>
-          A new-age professional, well-versed with the requirements and
-          challenges of a globalised work environment, Akshay Verma is the
-          powerhouse behind the stupendous success of one of Himachal Pradesh’s
-          most renowned jewellery brands – Verma Jewellers.
-        </p>
-        <p>
-          From the day he joined the business in 2000 at age 21, he relied on
-          passion and vision to build a towering brand. What began as a 700
-          sq.ft shop with 5 employees has grown into a 3500 sq.ft showroom with
-          over 60 employees.
-        </p>
-        <p>
-          Today, Verma Jewellers boasts a vast variety of Gold, Diamond &amp;
-          Silver jewellery meticulously sourced from Delhi, Kolkata, Mumbai,
-          Surat, and Ahmedabad. Their exclusive Diamond Jewellery, specially
-          handcrafted by experts, is unique and exceptional.
-        </p>
-      </div>
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
+    <!-- Iconic Section -->
+    <div class="flex flex-col items-center text-center" data-aos="fade-down">
+      <img src="assets/iconic-jeweller-icon.png" alt="Iconic Jeweller" class="w-auto h-auto mb-4" />
+      <p class="max-w-4xl text-2xl font-[didot]">
+        FOR ITS BEST QUALITY, SPLENDID DESIGNS &amp; FINEST CRAFTSMANSHIP,
+        VERMA JEWELLERS SOLAN WAS ADJUDGED AS ONE OF THE 100 ICONIC JEWELLERS
+        OF INDIA, BY ART OF JEWELLERY MAGAZINE, INDIA
+      </p>
     </div>
 
-    <div
-      class="carousel-inner animatearea fadeInLeft hidden-scroll visible animated"
-    >
-      <div class="carousel-item active">
-        <img
-          src="assets/store-banner.jpg"
-          class="d-block w-100 px-4 md:px-44 pb-8"
-          alt="Verma Jewellers"
-          title="Verma Jewellers"
-        />
-      </div>
+    <!-- History Text Block -->
+    <div class="text-center text-2xl max-w-5xl mx-auto font-[didot] italic" data-aos="fade-up">
+      We always stand by the quality of designs and craftsmanship of our
+      jewellery. We ensure each and every jewel showcased in our store has
+      resulted after a careful selection process adhering to the quality
+      standards maintained by Verma Jewellers' ethos of giving nothing but the
+      best. At Verma Jewellers, our products come with a satisfaction
+      guarantee. We promise our customers to feel free and comfortable with
+      their choice and offer 100% return guarantee.
     </div>
 
-     <footer id="store" class="pt-10 pb-6 px-4 bg-[#ECEADE] text-black">
-      <!-- Logo -->
-      <div class="flex justify-center mb-6">
-        <img
-          src="assets/verma-jewellers-logo.png"
-          alt="Verma Jewellers Logo"
-          class="w-40 md:w-52"
-        />
+    <!-- Founder Image -->
+    <div class="flex justify-center" data-aos="zoom-in-up">
+      <img src="assets/founder.jpg" alt="Founder" class="w-auto h-72" />
+    </div>
+
+    <!-- History Text Block 1 -->
+    <div class="text-justify text-sm md:text-lg leading-relaxed max-w-5xl mx-auto space-y-4 font-normal"
+      data-aos="zoom-in-down">
+      <p>
+        The foundation of “VERMA JEWELLERS, SOLAN” was laid by the late Shri
+        Jawala Prasad Verma in 1967. He was joined by his eldest son Shri
+        Naresh Chand Verma and the father-son team set their foot to work hard
+        and establish Verma Jewellers in the heart of Solan town. During the
+        next twenty-five years, both of them, with a positive attitude, took
+        certain concrete steps to expand. They included the adjacent area into
+        a larger shop, the present shop in 1995.
+      </p>
+      <p>
+        Mr. Naresh Chand Verma was joined by his young and dynamic son Akshay
+        Verma in 2002 after completing his studies in Gemology, Diamond
+        Grading, and Jewellery Manufacturing from the Indian Diamond
+        Institute, Surat.
+      </p>
+    </div>
+
+    <!-- History Text Block 2 -->
+    <div class="text-justify text-sm md:text-lg leading-relaxed max-w-5xl mx-auto font-normal" data-aos="fade-up">
+      The first big step of Akshay Verma was to get Hallmarked Certification
+      from the Bureau of Indian Standards for 100% Hallmarked Jewellery. They
+      have the honour to be the first jewellery store certified by BIS in
+      Himachal Pradesh in September 2002. Leveraging his strengths in business
+      development, product development, human resources, and administration,
+      Akshay Verma has been the catalyst of growth for the brand.
+    </div>
+
+    <!-- History Text Block 3 -->
+    <div class="text-justify text-sm md:text-lg leading-relaxed max-w-5xl mx-auto space-y-4 font-normal"
+      data-aos="fade-up">
+      <p>
+        A new-age professional, well-versed with the requirements and
+        challenges of a globalised work environment, Akshay Verma is the
+        powerhouse behind the stupendous success of one of Himachal Pradesh’s
+        most renowned jewellery brands – Verma Jewellers.
+      </p>
+      <p>
+        From the day he joined the business in 2000 at age 21, he relied on
+        passion and vision to build a towering brand. What began as a 700
+        sq.ft shop with 5 employees has grown into a 3500 sq.ft showroom with
+        over 60 employees.
+      </p>
+      <p>
+        Today, Verma Jewellers boasts a vast variety of Gold, Diamond &amp;
+        Silver jewellery meticulously sourced from Delhi, Kolkata, Mumbai,
+        Surat, and Ahmedabad. Their exclusive Diamond Jewellery, specially
+        handcrafted by experts, is unique and exceptional.
+      </p>
+    </div>
+  </div>
+
+  <div class="carousel-inner animatearea fadeInLeft hidden-scroll visible animated">
+    <div class="carousel-item active">
+      <img src="assets/store-banner.jpg" class="d-block w-100 px-4 md:px-44 pb-8" alt="Verma Jewellers"
+        title="Verma Jewellers" />
+    </div>
+  </div>
+
+  <footer id="store" class="pt-10 pb-6 px-4 bg-[#ECEADE] text-black">
+    <!-- Logo -->
+    <div class="flex justify-center mb-6">
+      <img src="assets/verma-jewellers-logo.png" alt="Verma Jewellers Logo" class="w-40 md:w-52" />
+    </div>
+
+    <div class="max-w-6xl mx-auto">
+      <!-- Separator -->
+      <div class="flex justify-center mb-4">
+        <img src="https://vermajewellers.com/images/footer-separator.png" alt="Separator" class="w-auto" />
       </div>
 
-      <div class="max-w-6xl mx-auto">
-        <!-- Separator -->
-        <div class="flex justify-center mb-4">
-          <img
-            src="https://vermajewellers.com/images/footer-separator.png"
-            alt="Separator"
-            class="w-auto"
-          />
-        </div>
-
-        <!-- Store Address Tagline -->
-        <div class="text-center text-lg md:text-xl font-semibold mb-8">
-          Most trusted jeweller of Himachal Pradesh
-        </div>
-        <!-- Footer Box Section -->
-        <div
-          class="flex flex-col md:flex-row items-center justify-center mb-10"
-        >
-          <!-- Address Info -->
-          <div
-            class="bg-white text-black px-6 py-6 rounded-md shadow-lg w-full max-w-2xl text-center"
-          >
-            <p class="text-base leading-relaxed">
-              Ganj Bazar, Upper Bazar, Bajoral Khurd, Solan, Himachal Pradesh
-              173212 <br />
-              <strong>Phone:</strong> +91 1792 222452-453-454 <br />
-              <strong>WhatsApp:</strong> 92186 22454
-            </p>
-          </div>
+      <!-- Store Address Tagline -->
+      <div class="text-center text-lg md:text-xl font-semibold mb-8">
+        Most trusted jeweller of Himachal Pradesh
+      </div>
+      <!-- Footer Box Section -->
+      <div class="flex flex-col md:flex-row items-center justify-center mb-10">
+        <!-- Address Info -->
+        <div class="bg-white text-black px-6 py-6 rounded-md shadow-lg w-full max-w-2xl text-center">
+          <p class="text-base leading-relaxed">
+            Ganj Bazar, Upper Bazar, Bajoral Khurd, Solan, Himachal Pradesh
+            173212 <br />
+            <strong>Phone:</strong> +91 1792 222452-453-454 <br />
+            <strong>WhatsApp:</strong> 92186 22454
+          </p>
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- AOS JS -->
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
+
 </html>
