@@ -120,14 +120,14 @@ const swiper = new Swiper(".brandingSwiper", {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
-        on: {
-          autoplayTimeLeft(s, time, progress) {
-            const circle = document.querySelector(".autoplay-progress svg");
-            const content = document.querySelector(".autoplay-progress span");
-            circle.style.setProperty("--progress", 1 - progress);
-            content.textContent = `${Math.ceil(time / 1000)}s`;
-          },
-        },
+        // on: {
+        //   autoplayTimeLeft(s, time, progress) {
+        //     const circle = document.querySelector(".autoplay-progress svg");
+        //     const content = document.querySelector(".autoplay-progress span");
+        //     circle.style.setProperty("--progress", 1 - progress);
+        //     content.textContent = `${Math.ceil(time / 1000)}s`;
+        //   },
+        // },
       });
 
 
