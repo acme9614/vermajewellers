@@ -65,6 +65,7 @@
         <a href="#" onclick="navigateToMyOrder()">Order</a>
         <a href="#" onclick="navigateToUserProfile()">Profile</a>
         <a href="#" onclick="navigateToDigitalGold()">Gold</a>
+        <a href="#" onclick="navigateToARVirtualTryOn()">Virtual Try-On</a>
         <a href="#" onclick="navigateToPanchang()">Panchang</a>
         <a href="#" onclick="navigateToSetting()">Settings</a>
       </nav>
@@ -146,7 +147,7 @@
   <div class="flex flex-col items-center justify-center pt-6 px-6 md:py-10 font-['Roboto']">
     <!-- Grid Container -->
     <div id="boxContainer"
-      class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 lg:grid-cols-6 gap-3 md:gap-3 lg:gap-6 overflow-hidden transition-all duration-500 max-h-[15.5rem] sm:max-h-none">
+      class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 lg:grid-cols-7 gap-3 md:gap-3 lg:gap-6 overflow-hidden transition-all duration-500 max-h-[15.5rem] sm:max-h-none">
       <!-- Box 1 -->
       <div onclick="navigateToScheme()"
         class="h-28 w-24 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
@@ -352,6 +353,21 @@
           <span class="text-sm text-white font-semibold mt-2">Quick Purchase</span>
         </div> -->
 
+
+          <div onclick="navigateToARVirtualTryOn()"
+        class="h-28 w-24 md:w-28 md:h-28 rounded-tr-[50px] rounded-bl-[50px] flex flex-col items-center justify-center text-center shadow-md text-white cursor-pointer border-4 border-[#d4af37]"
+        data-aos="zoom-in" data-aos-delay="100" style="
+            background: linear-gradient(
+              135deg,
+              #0d121d 0%,
+              #141e30 30%,
+              #243b55 70%,
+              #0f172a 100%
+            );
+          ">
+        <img class="w-10 h-10" src="assets/virtual.png" />
+        <span class="text-sm text-white font-semibold mt-2">Virtual<br class="block" />Try-On</span>
+      </div>
 
       <!-- Box 11 -->
 
